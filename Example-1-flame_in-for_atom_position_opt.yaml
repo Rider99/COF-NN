@@ -1,0 +1,30 @@
+main:
+    task: geopt 
+    verbosity: 0
+    two_level_geopt: True
+    types: H  C  N  O
+
+potential:
+    potential: ann
+    print_force : True
+    #ewald:
+    #    ewald: False
+
+geopt:
+    method: BFGS
+    fmaxtol: 5.E-5
+    condnum: 100.0
+    alphax: 1.0
+    precaution: normal
+    lprint: True
+    #trajectory: True
+    #print_force: .true.
+
+geopt_prec:
+    method: SD
+    fmaxtol: 1.E-3
+    alphax: 0.5
+    lprint: True
+
+ann:
+    approach: atombased
